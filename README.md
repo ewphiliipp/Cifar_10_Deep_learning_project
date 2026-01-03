@@ -61,3 +61,45 @@ This project demonstrates a holistic approach to modern AI research:
 3. **The VAE** completes the cycle by demonstrating that these complex visual features can be successfully compressed into a generative latent space while maintaining reconstruction fidelity.
 
 Together, these components show that "human-like" AI is not just about accuracy, but about the structural organization of internal knowledge—whether that knowledge is used to classify a bird or to reconstruct it from a 256-dimensional vector.
+
+### Requirements & Setup
+To replicate the experiments and analyses in this repository, follow these instructions for environment setup and data acquisition.
+
+1. Prerequisites
+The project is built using Python 3.8+ and PyTorch. You can install the necessary libraries using the following command:
+
+Anaconda Prompt:
+pip install torch torchvision numpy matplotlib seaborn pandas scikit-learn osculari tensorboard
+
+2. Dataset Acquisition
+The scripts utilize a combination of standard datasets and specific research data:
+
+CIFAR-10 / MNIST: These are automatically handled by the torchvision.datasets module. The scripts are configured to download them to the ./data/ directory upon first execution.
+
+CIFAR-10H Soft-Labels: The file cifar10h-probs.npy is required for the RSA and human-alignment analysis. This file contains the probability distributions of human responses for the CIFAR-10 test set.
+
+Note: Ensure this file is placed in the root directory of the project.
+
+Pre-trained Weights: For the RSA analysis, the model weights for PhilNet (best_model_epoch50.pt) or the VAE (vae_model.pt) must be present in the results folder if you do not intend to retrain from scratch.
+
+3. Hardware Requirements
+GPU Acceleration: A CUDA-compatible GPU is highly recommended for training PhilNet (50 epochs) and the VAE (100 epochs). The code automatically detects and utilizes the GPU if available.
+
+Storage: Ensure at least 5GB of free space for datasets, checkpoints, and RDM matrices.
+
+Getting Started (Quick Run)
+If you are working on a remote server via SSH, follow this standard procedure to begin:
+
+Initialize a Session: Start a tmux session to protect your training from network drops:
+
+Windows Powershell:
+tmux new -s deep_learning_project
+
+Run Training:
+
+For PhilNet: Execute the classification training block to reach the baseline accuracy and generate logs.
+
+Monitor Progress: Launch TensorBoard and use port forwarding to view curves in your local browser:
+
+Windows Powershell:
+tensorboard --logdir runs/ --port 6006
