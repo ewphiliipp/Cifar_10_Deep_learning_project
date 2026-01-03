@@ -83,7 +83,7 @@ Note: Ensure this file is placed in the root directory of the project.
 Pre-trained Weights: For the RSA analysis, the model weights for PhilNet (best_model_epoch50.pt) or the VAE (vae_model.pt) must be present in the results folder if you do not intend to retrain from scratch.
 
 3. Hardware Requirements
-GPU Acceleration: A CUDA-compatible GPU is highly recommended for training PhilNet (50 epochs) and the VAE (100 epochs). The code automatically detects and utilizes the GPU if available.
+GPU Acceleration: A CUDA-compatible GPU is highly recommended for training PhilNet (50 epochs) and the VAE (20 epochs). The code automatically detects and utilizes the GPU if available.
 
 Storage: Ensure at least 5GB of free space for datasets, checkpoints, and RDM matrices.
 
