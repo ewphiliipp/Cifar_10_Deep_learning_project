@@ -1,5 +1,8 @@
 # Human-Model Alignment & Generative Latent Spaces
 
+# Start Here
+[Click here to open the Main Project Notebook](.Cifar10_Project/.ipynb)
+
 ## 1. Project Objective
 
 The primary goal of this project is to investigate **Human-Model Alignment**—evaluating how closely the internal representations of artificial neural networks mirror human visual perception. By utilizing the **CIFAR-10H** dataset (human soft-labels), we bridge the gap between behavioral data and computational feature spaces. The project further explores **Generative Latent Modeling** via a VAE to understand how these representations can be compressed and reconstructed.
