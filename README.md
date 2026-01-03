@@ -1,7 +1,8 @@
 # Human-Model Alignment & Generative Latent Spaces
 
 # Start Here
-[Click here to open the Main Project Notebook](.Cifar10_Project/.ipynb)
+> **Start Here:** [Click here to open the Main Project Notebook](./Cifar10_Project.ipynb)
+
 
 ## 1. Project Objective
 
